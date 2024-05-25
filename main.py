@@ -15,7 +15,7 @@ st.set_page_config(
     layout="centered",  # Page layout option
 )
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = os.getenv("AIzaSyApriC9INk_Yia9ZFMkfLUSK53cmb6jrFg")
 
 # Set up Google Gemini-Pro AI model
 gen_ai.configure(api_key=GOOGLE_API_KEY)
@@ -36,7 +36,7 @@ if "chat_session" not in st.session_state:
 
 
 # Display the chatbot's title on the page
-st.title("🤖 Gemini Pro - ChatBot")
+st.title("Legal Ease - ChatBot")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -55,3 +55,4 @@ if user_prompt:
     # Display Gemini-Pro's response
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
+
