@@ -56,3 +56,4 @@ if user_prompt:
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
 
+
