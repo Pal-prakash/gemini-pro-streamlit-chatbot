@@ -8,6 +8,13 @@ import google.generativeai as gen_ai
 # Load environment variables
 load_dotenv()
 
+
+GOOGLE_API_KEY = os.getenv("AIzaSyApriC9INk_Yia9ZFMkfLUSK53cmb6jrFg")
+
+# Set up Google Gemini-Pro AI model
+gen_ai.configure(api_key=GOOGLE_API_KEY)
+model = gen_ai.GenerativeModel('gemini-pro') 
+
 # Configure Streamlit page settings
 st.set_page_config(
     page_title="Chat with Gemini-Pro!",
@@ -15,11 +22,6 @@ st.set_page_config(
     layout="centered",  # Page layout option
 )
 
-GOOGLE_API_KEY = os.getenv("AIzaSyApriC9INk_Yia9ZFMkfLUSK53cmb6jrFg")
-
-# Set up Google Gemini-Pro AI model
-gen_ai.configure(api_key=GOOGLE_API_KEY)
-model = gen_ai.GenerativeModel('gemini-pro')
 
 
 # Function to translate roles between Gemini-Pro and Streamlit terminology
